@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.admin.DetailRiwayatActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+        android:id="@+id/detail_tvLabelNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Nama"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+        <TextView
+        android:id="@+id/detail_tvNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Nama"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/detail_tvLabelUsia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Usia"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+        android:id="@+id/detail_tvUsia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Usia"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+        <TextView
+        android:id="@+id/detail_tvLabelKelamin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Jenis Kelamin"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+        <TextView
+        android:id="@+id/detail_tvKelamin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Kelamin"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/diagnosa_tvLabelGelajaCFChoosed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Gejala Terpilih"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/diagnosa_tvTitleCF" />
+
+        <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fillViewport="true">
+
+            <TableLayout
+                android:id="@+id/layout_headerGejala"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:background="@android:color/black"
+                    android:minHeight="40dp">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="No"
+                        android:textSize="15sp"
+                        android:paddingStart="5dp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Nama Gejala"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </TableRow>
+            </TableLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/detail_tvTitleCF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:text="Hasil Diagnosa Certainty Factor"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <TextView
+            android:id="@+id/detail_tvLabelPerhitunganCF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Perhitungan Certainty Factor"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/detail_tvRumusCF"
+            android:text="rumus"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginStart="10sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/detail_tvaHasilCF"
+            android:text="Hasil Analisa"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"/>
+
+        <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fillViewport="true">
+
+            <TableLayout
+                android:id="@+id/layout_headerHasilCF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:background="@android:color/black"
+                    android:minHeight="40dp">
+
+                    <TextView
+                        android:id="@+id/text_data1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:textStyle="bold"
+                        android:text="Diagnosa Penyakit"
+                        android:textColor="@color/white" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/text_data2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:textStyle="bold"
+                        android:text="Kemungkinan"
+                        android:textColor="@color/white" />
+                </TableRow>
+                <TableRow
+                    android:background="@color/gray">
+
+                    <TextView
+                        android:id="@+id/detail_tvPenyakitCF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Diagnosa Penyakit"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/detail_tvKemungkinanCF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Kemungkinan"
+                        android:textColor="@color/black" />
+                </TableRow>
+            </TableLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/diagnosa_tvTitleDS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text="Hasil Diagnosa Dempster Shafer"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/detail_tvLabelPerhitunganDS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Perhitungan Dempster Shafer"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/detail_tvRumusDS"
+            android:text="rumus"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginStart="10sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/detail_tvaHasilDS"
+            android:text="Hasil Analisa"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"/>
+
+        <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fillViewport="true"
+            android:layout_marginBottom="10dp">
+
+            <TableLayout
+                android:id="@+id/layout_headerHasilDS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:background="@android:color/black"
+                    android:minHeight="40dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:textStyle="bold"
+                        android:text="Diagnosa Penyakit"
+                        android:textColor="@color/white" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:textStyle="bold"
+                        android:text="Kemungkinan"
+                        android:textColor="@color/white" />
+                </TableRow>
+                <TableRow
+                    android:background="@color/gray">
+
+                    <TextView
+                        android:id="@+id/detail_tvPenyakitDS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Diagnosa Penyakit"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/detail_tvKemungkinanDS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Kemungkinan"
+                        android:textColor="@color/black" />
+                </TableRow>
+            </TableLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <!--<android.support.constraint.ConstraintLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<TextView-->
+            <!--android:id="@+id/detail_tvLabelNama"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="10dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:text="Nama"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="15sp"-->
+            <!--android:textStyle="bold"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/detail_tvNama"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="10dp"-->
+            <!--android:layout_marginEnd="10dp"-->
+            <!--android:text="Nama"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="15sp"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/detail_tvLabelNama" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/detail_tvLabelUsia"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="10dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:text="Usia"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="15sp"-->
+            <!--android:textStyle="bold"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/detail_tvNama" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/detail_tvUsia"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="10dp"-->
+            <!--android:layout_marginEnd="10dp"-->
+            <!--android:text="Usia"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="15sp"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintHorizontal_bias="0.0"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/detail_tvLabelUsia" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/detail_tvLabelKelamin"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="10dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:text="Jenis Kelamin"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="15sp"-->
+            <!--android:textStyle="bold"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/detail_tvUsia" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/detail_tvKelamin"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="10dp"-->
+            <!--android:layout_marginEnd="10dp"-->
+            <!--android:text="Kelamin"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="15sp"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintHorizontal_bias="0.0"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/detail_tvLabelKelamin" />-->
+
+        <!--<HorizontalScrollView-->
+            <!--android:id="@+id/detail_hsvGejala"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:fillViewport="true"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/detail_tvKelamin">-->
+
+            <!--<TableLayout-->
+                <!--android:id="@+id/layout_headerGejala"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<TableRow-->
+                    <!--android:background="@android:color/black"-->
+                    <!--android:minHeight="40dp">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:paddingStart="5dp"-->
+                        <!--android:text="No"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:textSize="15sp"-->
+                        <!--android:textStyle="bold" />-->
+
+                    <!--<View-->
+                        <!--android:layout_width="0.5dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:background="@color/white" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:paddingLeft="5dp"-->
+                        <!--android:paddingRight="5dp"-->
+                        <!--android:text="Nama Gejala"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:textSize="15sp"-->
+                        <!--android:textStyle="bold" />-->
+                <!--</TableRow>-->
+            <!--</TableLayout>-->
+        <!--</HorizontalScrollView>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/detail_tvLabelPenyakit"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="10dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:text="Penyakit"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="15sp"-->
+            <!--android:textStyle="bold"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/detail_hsvGejala" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/detail_tvPenyakit"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="10dp"-->
+            <!--android:text="Penyakit"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="15sp"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/detail_tvLabelPenyakit" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/detail_tvLabelPresentase"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="10dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:text="Presentase Kemungkinan"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="15sp"-->
+            <!--android:textStyle="bold"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/detail_tvPenyakit" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/detail_tvCF"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="10dp"-->
+            <!--android:text="CF"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="15sp"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/detail_tvLabelPresentase" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/detail_tvDS"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="10dp"-->
+            <!--android:text="DS"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="15sp"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/detail_tvCF" />-->
+    <!--</android.support.constraint.ConstraintLayout>-->
+</ScrollView>

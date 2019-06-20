@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.DiagnosaActivity">
+
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/diagnosa_svHasil"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/diagnosa_btnUlang"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/diagnosa_tvLabelGelajaCFChoosed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Gejala Terpilih"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/diagnosa_tvTitleCF" />
+
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fillViewport="true">
+
+                <TableLayout
+                    android:id="@+id/layout_headerGejala"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:background="@android:color/black"
+                        android:minHeight="40dp">
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="No"
+                            android:textSize="15sp"
+                            android:paddingStart="5dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:textSize="15sp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="Nama Gejala"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                    </TableRow>
+                </TableLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/diagnosa_tvTitleCF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:text="Hasil Diagnosa Certainty Factor"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <TextView
+                android:id="@+id/diagnosa_tvLabelPerhitunganCF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Perhitungan Certainty Factor"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/diagnosa_tvRumusCF"
+                android:text="rumus"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_marginStart="10sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/diagnosa_tvaHasilCF"
+                android:text="Hasil Analisa"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"/>
+
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fillViewport="true">
+
+                <TableLayout
+                    android:id="@+id/layout_headerHasilCF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:background="@android:color/black"
+                        android:minHeight="40dp">
+
+                        <TextView
+                            android:id="@+id/text_data1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textStyle="bold"
+                            android:text="Diagnosa Penyakit"
+                            android:textColor="@color/white" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"/>
+
+                        <TextView
+                            android:id="@+id/text_data2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textStyle="bold"
+                            android:text="Kemungkinan"
+                            android:textColor="@color/white" />
+                    </TableRow>
+                    <TableRow
+                        android:background="@color/gray">
+
+                        <TextView
+                            android:id="@+id/diagnosa_tvPenyakitCF"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="Diagnosa Penyakit"
+                            android:textColor="@color/black" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/diagnosa_tvKemungkinanCF"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="Kemungkinan"
+                            android:textColor="@color/black" />
+                    </TableRow>
+                </TableLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/diagnosa_tvTitleDS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:text="Hasil Diagnosa Dempster Shafer"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/diagnosa_tvLabelPerhitunganDS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Perhitungan Dempster Shafer"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/diagnosa_tvRumusDS"
+                android:text="rumus"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_marginStart="10sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/diagnosa_tvaHasilDS"
+                android:text="Hasil Analisa"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"/>
+
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fillViewport="true">
+
+                <TableLayout
+                    android:id="@+id/layout_headerHasilDS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:background="@android:color/black"
+                        android:minHeight="40dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textStyle="bold"
+                            android:text="Diagnosa Penyakit"
+                            android:textColor="@color/white" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textStyle="bold"
+                            android:text="Kemungkinan"
+                            android:textColor="@color/white" />
+                    </TableRow>
+                    <TableRow
+                        android:background="@color/gray">
+
+                        <TextView
+                            android:id="@+id/diagnosa_tvPenyakitDS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="Diagnosa Penyakit"
+                            android:textColor="@color/black" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/diagnosa_tvKemungkinanDS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="Kemungkinan"
+                            android:textColor="@color/black" />
+                    </TableRow>
+                </TableLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+
+        android:id="@+id/diagnosa_svGejala"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/diagnosa_btnSubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/diagnosa_llGejala"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/diagnosa_btnSubmit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/label_submit_diagnosa"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/diagnosa_btnUlang"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Ulang"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

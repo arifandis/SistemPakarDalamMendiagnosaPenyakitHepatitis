@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.admin.TambahPenyakitActivity">
+
+    <TextView
+        android:id="@+id/tambahPenyakit_tvLabelKode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="ID Penyakit"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/tambahPenyakit_etKode"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:hint="Ex: P001"
+        android:padding="10dp"
+        android:inputType="textCapSentences"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/tambahPenyakit_tvLabelKode"
+        app:layout_constraintTop_toBottomOf="@+id/tambahPenyakit_tvLabelKode" />
+
+    <TextView
+        android:id="@+id/tambahPenyakit_tvLabelPenyakit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Nama Penyakit"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tambahPenyakit_etKode" />
+
+    <EditText
+        android:id="@+id/tambahPenyakit_etPenyakit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:inputType="textCapWords"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tambahPenyakit_tvLabelPenyakit"
+        app:layout_constraintTop_toBottomOf="@+id/tambahPenyakit_tvLabelPenyakit" />
+
+    <Button
+        android:id="@+id/tambahPenyakit_btnSimpan"
+        android:layout_width="0dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Simpan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>

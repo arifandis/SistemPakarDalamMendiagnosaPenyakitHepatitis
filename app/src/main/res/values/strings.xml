@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Sistem Pakar Dalam Mendiagnosa Penyakit Hepatitis</string>
+    <string name="mulai_konsul">Mulai Konsultasi</string>
+    <string name="login_admin">Login Admin</string>
+    <string name="logout">Logout</string>
+    <string name="data_user">Data Pengguna</string>
+    <string name="label_nama">Nama</string>
+    <string name="label_usia">Usia</string>
+    <string name="label_jenis_kelamin">Jenis Kelamin</string>
+    <string name="label_submit_diagnosa">Submit Diagnosa</string>
+
+    <string-array name="list_penyakit">
+        <item>Pilih penyakit</item>
+    </string-array>
+
+    <string-array name="list_gejala">
+        <item>Pilih gejala</item>
+    </string-array>
+</resources>

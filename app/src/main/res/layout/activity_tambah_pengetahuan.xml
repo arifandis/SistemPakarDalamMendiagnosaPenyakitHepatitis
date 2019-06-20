@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.admin.TambahPengetahuanActivity">
+
+    <TextView
+        android:id="@+id/tambahPengetahuan_tvLabelPenyakit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Penyakit"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/tambahPengetahuan_llPenyakit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@color/gray"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tambahPengetahuan_tvLabelPenyakit"
+        app:layout_constraintTop_toBottomOf="@+id/tambahPengetahuan_tvLabelPenyakit">
+
+        <Spinner
+            android:id="@+id/tambahPengetahuan_sPenyakit"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:entries="@array/list_penyakit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tambahPengetahuan_tvLabelPenyakit"
+            app:layout_constraintTop_toBottomOf="@+id/tambahPengetahuan_tvLabelPenyakit" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tambahPengetahuan_tvLabelGejala"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Gejala"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tambahPengetahuan_llPenyakit" />
+
+    <LinearLayout
+        android:id="@+id/tambahPengetahuan_llGejala"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@color/gray"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tambahPengetahuan_tvLabelGejala"
+        app:layout_constraintTop_toBottomOf="@+id/tambahPengetahuan_tvLabelGejala">
+
+        <Spinner
+            android:id="@+id/tambahPengetahuan_sGejala"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:entries="@array/list_gejala"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/tambahPengetahuan_tvLabelPenyakit"
+            app:layout_constraintTop_toBottomOf="@+id/tambahPengetahuan_tvLabelGejala" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tambahPengetahuan_tvLabelBobot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Bobot"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tambahPengetahuan_llGejala" />
+
+    <TextView
+        android:id="@+id/tambahPengetahuan_tvBobot"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:padding="10dp"
+        android:text="0"
+        android:textColor="@color/dark_gray"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/tambahPengetahuan_tvLabelBobot"
+        app:layout_constraintTop_toBottomOf="@+id/tambahPengetahuan_tvLabelBobot" />
+
+    <Button
+        android:id="@+id/tambahPengetahuan_btnSimpan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Simpan"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>
