@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiService {
 //    public static final String BASE_URL = "https://diagnosahepatitis.000webhostapp.com/";
-    public static final String BASE_URL = "http://diagnosahepatitis.scienceontheweb.net/";
+    public static final String BASE_URL = "http://diagnosahepatitis.atwebpages.com/";
 
     public static Retrofit getService() {
         OkHttpClient.Builder client = new OkHttpClient.Builder();
